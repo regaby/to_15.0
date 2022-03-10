@@ -1,0 +1,15 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_users_%s
+fields:
+  print_cash_statement:
+    from:
+      name: print_cash_statement
+      type: boolean
+    map_method: magic_map
+    to:
+      name: print_cash_statement
+      type: boolean
+model_from: res.users
+model_to: res.users
+no_match_fields: []

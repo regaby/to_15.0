@@ -1,0 +1,51 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_users_%s
+fields:
+  l10n_ar_afip_responsibility_type_id:
+    from:
+      name: l10n_ar_afip_responsibility_type_id
+      relation: l10n_ar.afip.responsibility.type
+      type: many2one
+    map_method: magic_map
+    to:
+      name: l10n_ar_afip_responsibility_type_id
+      relation: l10n_ar.afip.responsibility.type
+      type: many2one
+  l10n_ar_gross_income_number:
+    from:
+      name: l10n_ar_gross_income_number
+      type: char
+    map_method: magic_map
+    to:
+      name: l10n_ar_gross_income_number
+      type: char
+  l10n_ar_gross_income_type:
+    from:
+      name: l10n_ar_gross_income_type
+      type: selection
+    map_method: magic_map
+    to:
+      name: l10n_ar_gross_income_type
+      type: selection
+  l10n_ar_special_purchase_document_type_ids:
+    from:
+      name: l10n_ar_special_purchase_document_type_ids
+      relation: l10n_latam.document.type
+      type: many2many
+    map_method: magic_map
+    to:
+      name: l10n_ar_special_purchase_document_type_ids
+      relation: l10n_latam.document.type
+      type: many2many
+model_from: res.users
+model_to: res.users
+no_match_fields:
+  l10n_ar_formatted_vat:
+    from:
+      name: l10n_ar_formatted_vat
+      type: char
+  l10n_ar_vat:
+    from:
+      name: l10n_ar_vat
+      type: char

@@ -1,0 +1,39 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  po_double_validation:
+    from:
+      name: po_double_validation
+      type: selection
+    map_method: magic_map
+    to:
+      name: po_double_validation
+      type: selection
+  po_double_validation_amount:
+    from:
+      name: po_double_validation_amount
+      type: monetary
+    map_method: magic_map
+    to:
+      name: po_double_validation_amount
+      type: monetary
+  po_lead:
+    from:
+      name: po_lead
+      type: float
+    map_method: magic_map
+    to:
+      name: po_lead
+      type: float
+  po_lock:
+    from:
+      name: po_lock
+      type: selection
+    map_method: magic_map
+    to:
+      name: po_lock
+      type: selection
+model_from: res.company
+model_to: res.company
+no_match_fields: []

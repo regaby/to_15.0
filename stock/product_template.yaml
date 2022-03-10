@@ -1,0 +1,130 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_template_%s
+fields:
+  description_picking:
+    from:
+      name: description_picking
+      type: text
+    map_method: magic_map
+    to:
+      name: description_picking
+      type: text
+  description_pickingin:
+    from:
+      name: description_pickingin
+      type: text
+    map_method: magic_map
+    to:
+      name: description_pickingin
+      type: text
+  description_pickingout:
+    from:
+      name: description_pickingout
+      type: text
+    map_method: magic_map
+    to:
+      name: description_pickingout
+      type: text
+  location_id:
+    from:
+      name: location_id
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: location_id
+      relation: stock.location
+      type: many2one
+  property_stock_inventory:
+    from:
+      name: property_stock_inventory
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_stock_inventory
+      relation: stock.location
+      type: many2one
+  property_stock_production:
+    from:
+      name: property_stock_production
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_stock_production
+      relation: stock.location
+      type: many2one
+  responsible_id:
+    from:
+      name: responsible_id
+      relation: res.users
+      type: many2one
+    map_method: magic_map
+    to:
+      name: responsible_id
+      relation: res.users
+      type: many2one
+  sale_delay:
+    from:
+      name: sale_delay
+      type: float
+    map_method: magic_map
+    to:
+      name: sale_delay
+      type: float
+  tracking:
+    from:
+      name: tracking
+      type: selection
+    map_method: magic_map
+    to:
+      name: tracking
+      type: selection
+  warehouse_id:
+    from:
+      name: warehouse_id
+      relation: stock.warehouse
+      type: many2one
+    map_method: magic_map
+    to:
+      name: warehouse_id
+      relation: stock.warehouse
+      type: many2one
+model_from: product.template
+model_to: product.template
+no_match_fields:
+  incoming_qty:
+    from:
+      name: incoming_qty
+      type: float
+  nbr_reordering_rules:
+    from:
+      name: nbr_reordering_rules
+      type: integer
+  outgoing_qty:
+    from:
+      name: outgoing_qty
+      type: float
+  qty_available:
+    from:
+      name: qty_available
+      type: float
+  reordering_max_qty:
+    from:
+      name: reordering_max_qty
+      type: float
+  reordering_min_qty:
+    from:
+      name: reordering_min_qty
+      type: float
+  route_from_categ_ids:
+    from:
+      name: route_from_categ_ids
+      relation: stock.location.route
+      type: many2many
+  virtual_available:
+    from:
+      name: virtual_available
+      type: float

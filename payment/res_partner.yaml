@@ -1,0 +1,23 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_partner_%s
+fields:
+  payment_token_ids:
+    from:
+      name: payment_token_ids
+      relation: payment.token
+      relation_field: partner_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: payment_token_ids
+      relation: payment.token
+      relation_field: partner_id
+      type: one2many
+model_from: res.partner
+model_to: res.partner
+no_match_fields:
+  payment_token_count:
+    from:
+      name: payment_token_count
+      type: integer

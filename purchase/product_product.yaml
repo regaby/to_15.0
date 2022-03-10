@@ -1,0 +1,45 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_product_%s
+fields:
+  property_account_creditor_price_difference:
+    from:
+      name: property_account_creditor_price_difference
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_account_creditor_price_difference
+      relation: account.account
+      type: many2one
+  purchase_line_warn:
+    from:
+      name: purchase_line_warn
+      type: selection
+    map_method: magic_map
+    to:
+      name: purchase_line_warn
+      type: selection
+  purchase_line_warn_msg:
+    from:
+      name: purchase_line_warn_msg
+      type: text
+    map_method: magic_map
+    to:
+      name: purchase_line_warn_msg
+      type: text
+  purchase_method:
+    from:
+      name: purchase_method
+      type: selection
+    map_method: magic_map
+    to:
+      name: purchase_method
+      type: selection
+model_from: product.product
+model_to: product.product
+no_match_fields:
+  purchased_product_qty:
+    from:
+      name: purchased_product_qty
+      type: float

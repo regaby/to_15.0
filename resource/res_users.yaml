@@ -1,0 +1,29 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_users_%s
+fields:
+  resource_calendar_id:
+    from:
+      name: resource_calendar_id
+      relation: resource.calendar
+      type: many2one
+    map_method: magic_map
+    to:
+      name: resource_calendar_id
+      relation: resource.calendar
+      type: many2one
+  resource_ids:
+    from:
+      name: resource_ids
+      relation: resource.resource
+      relation_field: user_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: resource_ids
+      relation: resource.resource
+      relation_field: user_id
+      type: one2many
+model_from: res.users
+model_to: res.users
+no_match_fields: []

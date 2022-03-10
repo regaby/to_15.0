@@ -1,0 +1,362 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_users_%s
+fields:
+  additional_note:
+    from:
+      name: additional_note
+      type: text
+    map_method: magic_map
+    to:
+      name: additional_note
+      type: text
+  address_home_id:
+    from:
+      name: address_home_id
+      relation: res.partner
+      type: many2one
+    map_method: magic_map
+    to:
+      name: address_home_id
+      relation: res.partner
+      type: many2one
+  address_id:
+    from:
+      name: address_id
+      relation: res.partner
+      type: many2one
+    map_method: magic_map
+    to:
+      name: address_id
+      relation: res.partner
+      type: many2one
+  barcode:
+    from:
+      name: barcode
+      type: char
+    map_method: magic_map
+    to:
+      name: barcode
+      type: char
+  birthday:
+    from:
+      name: birthday
+      type: date
+    map_method: magic_map
+    to:
+      name: birthday
+      type: date
+  category_ids:
+    from:
+      name: category_ids
+      relation: hr.employee.category
+      type: many2many
+    map_method: magic_map
+    to:
+      name: category_ids
+      relation: hr.employee.category
+      type: many2many
+  certificate:
+    from:
+      name: certificate
+      type: selection
+    map_method: magic_map
+    to:
+      name: certificate
+      type: selection
+  children:
+    from:
+      name: children
+      type: integer
+    map_method: magic_map
+    to:
+      name: children
+      type: integer
+  coach_id:
+    from:
+      name: coach_id
+      relation: hr.employee
+      type: many2one
+    map_method: magic_map
+    to:
+      name: coach_id
+      relation: hr.employee
+      type: many2one
+  country_of_birth:
+    from:
+      name: country_of_birth
+      relation: res.country
+      type: many2one
+    map_method: magic_map
+    to:
+      name: country_of_birth
+      relation: res.country
+      type: many2one
+  department_id:
+    from:
+      name: department_id
+      relation: hr.department
+      type: many2one
+    map_method: magic_map
+    to:
+      name: department_id
+      relation: hr.department
+      type: many2one
+  emergency_contact:
+    from:
+      name: emergency_contact
+      type: char
+    map_method: magic_map
+    to:
+      name: emergency_contact
+      type: char
+  emergency_phone:
+    from:
+      name: emergency_phone
+      type: char
+    map_method: magic_map
+    to:
+      name: emergency_phone
+      type: char
+  employee_bank_account_id:
+    from:
+      name: employee_bank_account_id
+      relation: res.partner.bank
+      type: many2one
+    map_method: magic_map
+    to:
+      name: employee_bank_account_id
+      relation: res.partner.bank
+      type: many2one
+  employee_country_id:
+    from:
+      name: employee_country_id
+      relation: res.country
+      type: many2one
+    map_method: magic_map
+    to:
+      name: employee_country_id
+      relation: res.country
+      type: many2one
+  employee_ids:
+    from:
+      name: employee_ids
+      relation: hr.employee
+      relation_field: user_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: employee_ids
+      relation: hr.employee
+      relation_field: user_id
+      type: one2many
+  employee_parent_id:
+    from:
+      name: employee_parent_id
+      relation: hr.employee
+      type: many2one
+    map_method: magic_map
+    to:
+      name: employee_parent_id
+      relation: hr.employee
+      type: many2one
+  employee_phone:
+    from:
+      name: employee_phone
+      type: char
+    map_method: magic_map
+    to:
+      name: employee_phone
+      type: char
+  gender:
+    from:
+      name: gender
+      type: selection
+    map_method: magic_map
+    to:
+      name: gender
+      type: selection
+  identification_id:
+    from:
+      name: identification_id
+      type: char
+    map_method: magic_map
+    to:
+      name: identification_id
+      type: char
+  is_address_home_a_company:
+    from:
+      name: is_address_home_a_company
+      type: boolean
+    map_method: magic_map
+    to:
+      name: is_address_home_a_company
+      type: boolean
+  job_title:
+    from:
+      name: job_title
+      type: char
+    map_method: magic_map
+    to:
+      name: job_title
+      type: char
+  km_home_work:
+    from:
+      name: km_home_work
+      type: integer
+    map_method: magic_map
+    to:
+      name: km_home_work
+      type: integer
+  marital:
+    from:
+      name: marital
+      type: selection
+    map_method: magic_map
+    to:
+      name: marital
+      type: selection
+  mobile_phone:
+    from:
+      name: mobile_phone
+      type: char
+    map_method: magic_map
+    to:
+      name: mobile_phone
+      type: char
+  passport_id:
+    from:
+      name: passport_id
+      type: char
+    map_method: magic_map
+    to:
+      name: passport_id
+      type: char
+  permit_no:
+    from:
+      name: permit_no
+      type: char
+    map_method: magic_map
+    to:
+      name: permit_no
+      type: char
+  pin:
+    from:
+      name: pin
+      type: char
+    map_method: magic_map
+    to:
+      name: pin
+      type: char
+  place_of_birth:
+    from:
+      name: place_of_birth
+      type: char
+    map_method: magic_map
+    to:
+      name: place_of_birth
+      type: char
+  private_email:
+    from:
+      name: private_email
+      type: char
+    map_method: magic_map
+    to:
+      name: private_email
+      type: char
+  spouse_birthdate:
+    from:
+      name: spouse_birthdate
+      type: date
+    map_method: magic_map
+    to:
+      name: spouse_birthdate
+      type: date
+  spouse_complete_name:
+    from:
+      name: spouse_complete_name
+      type: char
+    map_method: magic_map
+    to:
+      name: spouse_complete_name
+      type: char
+  study_field:
+    from:
+      name: study_field
+      type: char
+    map_method: magic_map
+    to:
+      name: study_field
+      type: char
+  study_school:
+    from:
+      name: study_school
+      type: char
+    map_method: magic_map
+    to:
+      name: study_school
+      type: char
+  visa_expire:
+    from:
+      name: visa_expire
+      type: date
+    map_method: magic_map
+    to:
+      name: visa_expire
+      type: date
+  visa_no:
+    from:
+      name: visa_no
+      type: char
+    map_method: magic_map
+    to:
+      name: visa_no
+      type: char
+  work_email:
+    from:
+      name: work_email
+      type: char
+    map_method: magic_map
+    to:
+      name: work_email
+      type: char
+  work_phone:
+    from:
+      name: work_phone
+      type: char
+    map_method: magic_map
+    to:
+      name: work_phone
+      type: char
+model_from: res.users
+model_to: res.users
+no_match_fields:
+  can_edit:
+    from:
+      name: can_edit
+      type: boolean
+  employee_count:
+    from:
+      name: employee_count
+      type: integer
+  employee_id:
+    from:
+      name: employee_id
+      relation: hr.employee
+      type: many2one
+  hr_presence_state:
+    from:
+      name: hr_presence_state
+      type: selection
+  last_activity:
+    from:
+      name: last_activity
+      type: date
+  last_activity_time:
+    from:
+      name: last_activity_time
+      type: char
+  work_location:
+    from:
+      name: work_location
+      type: char

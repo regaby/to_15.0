@@ -1,0 +1,17 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_product_%s
+fields:
+  location_to_update_label:
+    from:
+      name: location_to_update_label
+      relation: stock.location
+      type: many2many
+    map_method: magic_map
+    to:
+      name: location_to_update_label
+      relation: stock.location
+      type: many2many
+model_from: product.product
+model_to: product.product
+no_match_fields: []

@@ -1,0 +1,15 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_template_%s
+fields:
+  type:
+    from:
+      name: type
+      type: selection
+    map_method: magic_map
+    to:
+      name: type
+      type: selection
+model_from: product.template
+model_to: product.template
+no_match_fields: []

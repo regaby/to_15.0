@@ -1,0 +1,182 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_product_%s
+fields:
+  description_picking:
+    from:
+      name: description_picking
+      type: text
+    map_method: magic_map
+    to:
+      name: description_picking
+      type: text
+  description_pickingin:
+    from:
+      name: description_pickingin
+      type: text
+    map_method: magic_map
+    to:
+      name: description_pickingin
+      type: text
+  description_pickingout:
+    from:
+      name: description_pickingout
+      type: text
+    map_method: magic_map
+    to:
+      name: description_pickingout
+      type: text
+  location_id:
+    from:
+      name: location_id
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: location_id
+      relation: stock.location
+      type: many2one
+  orderpoint_ids:
+    from:
+      name: orderpoint_ids
+      relation: stock.warehouse.orderpoint
+      relation_field: product_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: orderpoint_ids
+      relation: stock.warehouse.orderpoint
+      relation_field: product_id
+      type: one2many
+  property_stock_inventory:
+    from:
+      name: property_stock_inventory
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_stock_inventory
+      relation: stock.location
+      type: many2one
+  property_stock_production:
+    from:
+      name: property_stock_production
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_stock_production
+      relation: stock.location
+      type: many2one
+  putaway_rule_ids:
+    from:
+      name: putaway_rule_ids
+      relation: stock.putaway.rule
+      relation_field: product_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: putaway_rule_ids
+      relation: stock.putaway.rule
+      relation_field: product_id
+      type: one2many
+  responsible_id:
+    from:
+      name: responsible_id
+      relation: res.users
+      type: many2one
+    map_method: magic_map
+    to:
+      name: responsible_id
+      relation: res.users
+      type: many2one
+  sale_delay:
+    from:
+      name: sale_delay
+      type: float
+    map_method: magic_map
+    to:
+      name: sale_delay
+      type: float
+  stock_move_ids:
+    from:
+      name: stock_move_ids
+      relation: stock.move
+      relation_field: product_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: stock_move_ids
+      relation: stock.move
+      relation_field: product_id
+      type: one2many
+  stock_quant_ids:
+    from:
+      name: stock_quant_ids
+      relation: stock.quant
+      relation_field: product_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: stock_quant_ids
+      relation: stock.quant
+      relation_field: product_id
+      type: one2many
+  tracking:
+    from:
+      name: tracking
+      type: selection
+    map_method: magic_map
+    to:
+      name: tracking
+      type: selection
+  warehouse_id:
+    from:
+      name: warehouse_id
+      relation: stock.warehouse
+      type: many2one
+    map_method: magic_map
+    to:
+      name: warehouse_id
+      relation: stock.warehouse
+      type: many2one
+model_from: product.product
+model_to: product.product
+no_match_fields:
+  free_qty:
+    from:
+      name: free_qty
+      type: float
+  incoming_qty:
+    from:
+      name: incoming_qty
+      type: float
+  nbr_reordering_rules:
+    from:
+      name: nbr_reordering_rules
+      type: integer
+  outgoing_qty:
+    from:
+      name: outgoing_qty
+      type: float
+  qty_available:
+    from:
+      name: qty_available
+      type: float
+  reordering_max_qty:
+    from:
+      name: reordering_max_qty
+      type: float
+  reordering_min_qty:
+    from:
+      name: reordering_min_qty
+      type: float
+  route_from_categ_ids:
+    from:
+      name: route_from_categ_ids
+      relation: stock.location.route
+      type: many2many
+  virtual_available:
+    from:
+      name: virtual_available
+      type: float

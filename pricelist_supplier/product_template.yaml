@@ -1,0 +1,17 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_template_%s
+fields:
+  supplier_id:
+    from:
+      name: supplier_id
+      relation: res.partner
+      type: many2one
+    map_method: magic_map
+    to:
+      name: supplier_id
+      relation: res.partner
+      type: many2one
+model_from: product.template
+model_to: product.template
+no_match_fields: []

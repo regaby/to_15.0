@@ -1,0 +1,17 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_template_%s
+fields:
+  route_ids:
+    from:
+      name: route_ids
+      relation: stock.location.route
+      type: many2many
+    map_method: magic_map
+    to:
+      name: route_ids
+      relation: stock.location.route
+      type: many2many
+model_from: product.template
+model_to: product.template
+no_match_fields: []

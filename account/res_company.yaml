@@ -1,0 +1,414 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  account_dashboard_onboarding_state:
+    from:
+      name: account_dashboard_onboarding_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: account_dashboard_onboarding_state
+      type: selection
+  account_default_pos_receivable_account_id:
+    from:
+      name: account_default_pos_receivable_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: account_default_pos_receivable_account_id
+      relation: account.account
+      type: many2one
+  account_invoice_onboarding_state:
+    from:
+      name: account_invoice_onboarding_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: account_invoice_onboarding_state
+      type: selection
+  account_onboarding_invoice_layout_state:
+    from:
+      name: account_onboarding_invoice_layout_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: account_onboarding_invoice_layout_state
+      type: selection
+  account_onboarding_sale_tax_state:
+    from:
+      name: account_onboarding_sale_tax_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: account_onboarding_sale_tax_state
+      type: selection
+  account_opening_date:
+    from:
+      name: account_opening_date
+      type: date
+    map_method: magic_map
+    to:
+      name: account_opening_date
+      type: date
+  account_opening_journal_id:
+    from:
+      name: account_opening_journal_id
+      relation: account.journal
+      type: many2one
+    map_method: magic_map
+    to:
+      name: account_opening_journal_id
+      relation: account.journal
+      type: many2one
+  account_opening_move_id:
+    from:
+      name: account_opening_move_id
+      relation: account.move
+      type: many2one
+    map_method: magic_map
+    to:
+      name: account_opening_move_id
+      relation: account.move
+      type: many2one
+  account_purchase_tax_id:
+    from:
+      name: account_purchase_tax_id
+      relation: account.tax
+      type: many2one
+    map_method: magic_map
+    to:
+      name: account_purchase_tax_id
+      relation: account.tax
+      type: many2one
+  account_sale_tax_id:
+    from:
+      name: account_sale_tax_id
+      relation: account.tax
+      type: many2one
+    map_method: magic_map
+    to:
+      name: account_sale_tax_id
+      relation: account.tax
+      type: many2one
+  account_setup_bank_data_state:
+    from:
+      name: account_setup_bank_data_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: account_setup_bank_data_state
+      type: selection
+  account_setup_coa_state:
+    from:
+      name: account_setup_coa_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: account_setup_coa_state
+      type: selection
+  account_setup_fy_data_state:
+    from:
+      name: account_setup_fy_data_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: account_setup_fy_data_state
+      type: selection
+  anglo_saxon_accounting:
+    from:
+      name: anglo_saxon_accounting
+      type: boolean
+    map_method: magic_map
+    to:
+      name: anglo_saxon_accounting
+      type: boolean
+  bank_account_code_prefix:
+    from:
+      name: bank_account_code_prefix
+      type: char
+    map_method: magic_map
+    to:
+      name: bank_account_code_prefix
+      type: char
+  bank_journal_ids:
+    from:
+      name: bank_journal_ids
+      relation: account.journal
+      relation_field: company_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: bank_journal_ids
+      relation: account.journal
+      relation_field: company_id
+      type: one2many
+  cash_account_code_prefix:
+    from:
+      name: cash_account_code_prefix
+      type: char
+    map_method: magic_map
+    to:
+      name: cash_account_code_prefix
+      type: char
+  chart_template_id:
+    from:
+      name: chart_template_id
+      relation: account.chart.template
+      type: many2one
+    map_method: magic_map
+    to:
+      name: chart_template_id
+      relation: account.chart.template
+      type: many2one
+  currency_exchange_journal_id:
+    from:
+      name: currency_exchange_journal_id
+      relation: account.journal
+      type: many2one
+    map_method: magic_map
+    to:
+      name: currency_exchange_journal_id
+      relation: account.journal
+      type: many2one
+  default_cash_difference_expense_account_id:
+    from:
+      name: default_cash_difference_expense_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: default_cash_difference_expense_account_id
+      relation: account.account
+      type: many2one
+  default_cash_difference_income_account_id:
+    from:
+      name: default_cash_difference_income_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: default_cash_difference_income_account_id
+      relation: account.account
+      type: many2one
+  expects_chart_of_accounts:
+    from:
+      name: expects_chart_of_accounts
+      type: boolean
+    map_method: magic_map
+    to:
+      name: expects_chart_of_accounts
+      type: boolean
+  expense_accrual_account_id:
+    from:
+      name: expense_accrual_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: expense_accrual_account_id
+      relation: account.account
+      type: many2one
+  expense_currency_exchange_account_id:
+    from:
+      name: expense_currency_exchange_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: expense_currency_exchange_account_id
+      relation: account.account
+      type: many2one
+  fiscalyear_last_day:
+    from:
+      name: fiscalyear_last_day
+      type: integer
+    map_method: magic_map
+    to:
+      name: fiscalyear_last_day
+      type: integer
+  fiscalyear_last_month:
+    from:
+      name: fiscalyear_last_month
+      type: selection
+    map_method: magic_map
+    to:
+      name: fiscalyear_last_month
+      type: selection
+  fiscalyear_lock_date:
+    from:
+      name: fiscalyear_lock_date
+      type: date
+    map_method: magic_map
+    to:
+      name: fiscalyear_lock_date
+      type: date
+  income_currency_exchange_account_id:
+    from:
+      name: income_currency_exchange_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: income_currency_exchange_account_id
+      relation: account.account
+      type: many2one
+  incoterm_id:
+    from:
+      name: incoterm_id
+      relation: account.incoterms
+      type: many2one
+    map_method: magic_map
+    to:
+      name: incoterm_id
+      relation: account.incoterms
+      type: many2one
+  invoice_is_email:
+    from:
+      name: invoice_is_email
+      type: boolean
+    map_method: magic_map
+    to:
+      name: invoice_is_email
+      type: boolean
+  invoice_is_print:
+    from:
+      name: invoice_is_print
+      type: boolean
+    map_method: magic_map
+    to:
+      name: invoice_is_print
+      type: boolean
+  invoice_terms:
+    from:
+      name: invoice_terms
+      type: text
+    map_method: magic_map
+    to:
+      name: invoice_terms
+      type: html
+  period_lock_date:
+    from:
+      name: period_lock_date
+      type: date
+    map_method: magic_map
+    to:
+      name: period_lock_date
+      type: date
+  property_stock_account_input_categ_id:
+    from:
+      name: property_stock_account_input_categ_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_stock_account_input_categ_id
+      relation: account.account
+      type: many2one
+  property_stock_account_output_categ_id:
+    from:
+      name: property_stock_account_output_categ_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_stock_account_output_categ_id
+      relation: account.account
+      type: many2one
+  property_stock_valuation_account_id:
+    from:
+      name: property_stock_valuation_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: property_stock_valuation_account_id
+      relation: account.account
+      type: many2one
+  qr_code:
+    from:
+      name: qr_code
+      type: boolean
+    map_method: magic_map
+    to:
+      name: qr_code
+      type: boolean
+  revenue_accrual_account_id:
+    from:
+      name: revenue_accrual_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: revenue_accrual_account_id
+      relation: account.account
+      type: many2one
+  tax_calculation_rounding_method:
+    from:
+      name: tax_calculation_rounding_method
+      type: selection
+    map_method: magic_map
+    to:
+      name: tax_calculation_rounding_method
+      type: selection
+  tax_cash_basis_journal_id:
+    from:
+      name: tax_cash_basis_journal_id
+      relation: account.journal
+      type: many2one
+    map_method: magic_map
+    to:
+      name: tax_cash_basis_journal_id
+      relation: account.journal
+      type: many2one
+  tax_exigibility:
+    from:
+      name: tax_exigibility
+      type: boolean
+    map_method: magic_map
+    to:
+      name: tax_exigibility
+      type: boolean
+  tax_lock_date:
+    from:
+      name: tax_lock_date
+      type: date
+    map_method: magic_map
+    to:
+      name: tax_lock_date
+      type: date
+  transfer_account_code_prefix:
+    from:
+      name: transfer_account_code_prefix
+      type: char
+    map_method: magic_map
+    to:
+      name: transfer_account_code_prefix
+      type: char
+  transfer_account_id:
+    from:
+      name: transfer_account_id
+      relation: account.account
+      type: many2one
+    map_method: magic_map
+    to:
+      name: transfer_account_id
+      relation: account.account
+      type: many2one
+model_from: res.company
+model_to: res.company
+no_match_fields:
+  account_bank_reconciliation_start:
+    from:
+      name: account_bank_reconciliation_start
+      type: date
+  account_onboarding_sample_invoice_state:
+    from:
+      name: account_onboarding_sample_invoice_state
+      type: selection
+  accrual_default_journal_id:
+    from:
+      name: accrual_default_journal_id
+      relation: account.journal
+      type: many2one

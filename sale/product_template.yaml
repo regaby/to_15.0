@@ -1,0 +1,59 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_template_%s
+fields:
+  expense_policy:
+    from:
+      name: expense_policy
+      type: selection
+    map_method: magic_map
+    to:
+      name: expense_policy
+      type: selection
+  invoice_policy:
+    from:
+      name: invoice_policy
+      type: selection
+    map_method: magic_map
+    to:
+      name: invoice_policy
+      type: selection
+  sale_line_warn:
+    from:
+      name: sale_line_warn
+      type: selection
+    map_method: magic_map
+    to:
+      name: sale_line_warn
+      type: selection
+  sale_line_warn_msg:
+    from:
+      name: sale_line_warn_msg
+      type: text
+    map_method: magic_map
+    to:
+      name: sale_line_warn_msg
+      type: text
+  service_type:
+    from:
+      name: service_type
+      type: selection
+    map_method: magic_map
+    to:
+      name: service_type
+      type: selection
+model_from: product.template
+model_to: product.template
+no_match_fields:
+  sales_count:
+    from:
+      name: sales_count
+      type: float
+  visible_expense_policy:
+    from:
+      name: visible_expense_policy
+      type: boolean
+  visible_qty_configurator:
+    from:
+      name: visible_qty_configurator
+      type: boolean

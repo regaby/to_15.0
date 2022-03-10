@@ -1,0 +1,17 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  tree_view_pricelist_id:
+    from:
+      name: tree_view_pricelist_id
+      relation: product.pricelist
+      type: many2one
+    map_method: magic_map
+    to:
+      name: tree_view_pricelist_id
+      relation: product.pricelist
+      type: many2one
+model_from: res.company
+model_to: res.company
+no_match_fields: []

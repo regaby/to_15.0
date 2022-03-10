@@ -1,0 +1,23 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  payment_acquirer_onboarding_state:
+    from:
+      name: payment_acquirer_onboarding_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: payment_acquirer_onboarding_state
+      type: selection
+  payment_onboarding_payment_method:
+    from:
+      name: payment_onboarding_payment_method
+      type: selection
+    map_method: magic_map
+    to:
+      name: payment_onboarding_payment_method
+      type: selection
+model_from: res.company
+model_to: res.company
+no_match_fields: []

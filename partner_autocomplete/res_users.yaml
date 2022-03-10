@@ -1,0 +1,23 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_users_%s
+fields:
+  additional_info:
+    from:
+      name: additional_info
+      type: char
+    map_method: magic_map
+    to:
+      name: additional_info
+      type: char
+  partner_gid:
+    from:
+      name: partner_gid
+      type: integer
+    map_method: magic_map
+    to:
+      name: partner_gid
+      type: integer
+model_from: res.users
+model_to: res.users
+no_match_fields: []

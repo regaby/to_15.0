@@ -1,0 +1,31 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  alias_ids:
+    from:
+      name: alias_ids
+      relation: afipws.certificate_alias
+      relation_field: company_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: alias_ids
+      relation: afipws.certificate_alias
+      relation_field: company_id
+      type: one2many
+  connection_ids:
+    from:
+      name: connection_ids
+      relation: afipws.connection
+      relation_field: company_id
+      type: one2many
+    map_method: magic_map
+    to:
+      name: connection_ids
+      relation: afipws.connection
+      relation_field: company_id
+      type: one2many
+model_from: res.company
+model_to: res.company
+no_match_fields: []

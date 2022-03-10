@@ -1,0 +1,35 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  internal_transit_location_id:
+    from:
+      name: internal_transit_location_id
+      relation: stock.location
+      type: many2one
+    map_method: magic_map
+    to:
+      name: internal_transit_location_id
+      relation: stock.location
+      type: many2one
+  stock_mail_confirmation_template_id:
+    from:
+      name: stock_mail_confirmation_template_id
+      relation: mail.template
+      type: many2one
+    map_method: magic_map
+    to:
+      name: stock_mail_confirmation_template_id
+      relation: mail.template
+      type: many2one
+  stock_move_email_validation:
+    from:
+      name: stock_move_email_validation
+      type: boolean
+    map_method: magic_map
+    to:
+      name: stock_move_email_validation
+      type: boolean
+model_from: res.company
+model_to: res.company
+no_match_fields: []

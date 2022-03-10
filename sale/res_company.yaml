@@ -1,0 +1,63 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  portal_confirmation_pay:
+    from:
+      name: portal_confirmation_pay
+      type: boolean
+    map_method: magic_map
+    to:
+      name: portal_confirmation_pay
+      type: boolean
+  portal_confirmation_sign:
+    from:
+      name: portal_confirmation_sign
+      type: boolean
+    map_method: magic_map
+    to:
+      name: portal_confirmation_sign
+      type: boolean
+  quotation_validity_days:
+    from:
+      name: quotation_validity_days
+      type: integer
+    map_method: magic_map
+    to:
+      name: quotation_validity_days
+      type: integer
+  sale_onboarding_order_confirmation_state:
+    from:
+      name: sale_onboarding_order_confirmation_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: sale_onboarding_order_confirmation_state
+      type: selection
+  sale_onboarding_payment_method:
+    from:
+      name: sale_onboarding_payment_method
+      type: selection
+    map_method: magic_map
+    to:
+      name: sale_onboarding_payment_method
+      type: selection
+  sale_onboarding_sample_quotation_state:
+    from:
+      name: sale_onboarding_sample_quotation_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: sale_onboarding_sample_quotation_state
+      type: selection
+  sale_quotation_onboarding_state:
+    from:
+      name: sale_quotation_onboarding_state
+      type: selection
+    map_method: magic_map
+    to:
+      name: sale_quotation_onboarding_state
+      type: selection
+model_from: res.company
+model_to: res.company
+no_match_fields: []

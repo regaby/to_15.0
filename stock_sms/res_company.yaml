@@ -1,0 +1,33 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_company_%s
+fields:
+  has_received_warning_stock_sms:
+    from:
+      name: has_received_warning_stock_sms
+      type: boolean
+    map_method: magic_map
+    to:
+      name: has_received_warning_stock_sms
+      type: boolean
+  stock_move_sms_validation:
+    from:
+      name: stock_move_sms_validation
+      type: boolean
+    map_method: magic_map
+    to:
+      name: stock_move_sms_validation
+      type: boolean
+  stock_sms_confirmation_template_id:
+    from:
+      name: stock_sms_confirmation_template_id
+      relation: sms.template
+      type: many2one
+    map_method: magic_map
+    to:
+      name: stock_sms_confirmation_template_id
+      relation: sms.template
+      type: many2one
+model_from: res.company
+model_to: res.company
+no_match_fields: []

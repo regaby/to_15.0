@@ -1,0 +1,71 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_users_%s
+fields:
+  allow_fixed_amount:
+    from:
+      name: allow_fixed_amount
+      type: boolean
+    map_method: magic_map
+    to:
+      name: allow_fixed_amount
+      type: boolean
+  allow_percentage:
+    from:
+      name: allow_percentage
+      type: boolean
+    map_method: magic_map
+    to:
+      name: allow_percentage
+      type: boolean
+  apply_discount_type:
+    from:
+      name: apply_discount_type
+      type: selection
+    map_method: magic_map
+    to:
+      name: apply_discount_type
+      type: selection
+  based_on:
+    from:
+      name: based_on
+      type: selection
+    map_method: magic_map
+    to:
+      name: based_on
+      type: selection
+  can_change_price:
+    from:
+      name: can_change_price
+      type: boolean
+    map_method: magic_map
+    to:
+      name: can_change_price
+      type: boolean
+  can_give_discount:
+    from:
+      name: can_give_discount
+      type: boolean
+    map_method: magic_map
+    to:
+      name: can_give_discount
+      type: boolean
+  discount_limit:
+    from:
+      name: discount_limit
+      type: float
+    map_method: magic_map
+    to:
+      name: discount_limit
+      type: float
+  percentage_limit:
+    from:
+      name: percentage_limit
+      type: float
+    map_method: magic_map
+    to:
+      name: percentage_limit
+      type: float
+model_from: res.users
+model_to: res.users
+no_match_fields: []

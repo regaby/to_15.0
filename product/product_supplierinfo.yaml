@@ -1,0 +1,134 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: product_supplierinfo_%s
+fields:
+  company_id:
+    from:
+      name: company_id
+      relation: res.company
+      type: many2one
+    map_method: magic_map
+    to:
+      name: company_id
+      relation: res.company
+      type: many2one
+  currency_id:
+    from:
+      name: currency_id
+      relation: res.currency
+      type: many2one
+    map_method: magic_map
+    to:
+      name: currency_id
+      relation: res.currency
+      type: many2one
+  date_end:
+    from:
+      name: date_end
+      type: date
+    map_method: magic_map
+    to:
+      name: date_end
+      type: date
+  date_start:
+    from:
+      name: date_start
+      type: date
+    map_method: magic_map
+    to:
+      name: date_start
+      type: date
+  delay:
+    from:
+      name: delay
+      type: integer
+    map_method: magic_map
+    to:
+      name: delay
+      type: integer
+  min_qty:
+    from:
+      name: min_qty
+      type: float
+    map_method: magic_map
+    to:
+      name: min_qty
+      type: float
+  name:
+    from:
+      name: name
+      relation: res.partner
+      type: many2one
+    map_method: magic_map
+    to:
+      name: name
+      relation: res.partner
+      type: many2one
+  price:
+    from:
+      name: price
+      type: float
+    map_method: magic_map
+    to:
+      name: price
+      type: float
+  product_code:
+    from:
+      name: product_code
+      type: char
+    map_method: magic_map
+    to:
+      name: product_code
+      type: char
+  product_id:
+    from:
+      name: product_id
+      relation: product.product
+      type: many2one
+    map_method: magic_map
+    to:
+      name: product_id
+      relation: product.product
+      type: many2one
+  product_name:
+    from:
+      name: product_name
+      type: char
+    map_method: magic_map
+    to:
+      name: product_name
+      type: char
+  product_tmpl_id:
+    from:
+      name: product_tmpl_id
+      relation: product.template
+      type: many2one
+    map_method: magic_map
+    to:
+      name: product_tmpl_id
+      relation: product.template
+      type: many2one
+  sequence:
+    from:
+      name: sequence
+      type: integer
+    map_method: magic_map
+    to:
+      name: sequence
+      type: integer
+model_from: product.supplierinfo
+model_to: product.supplierinfo
+no_match_fields:
+  display_name:
+    from:
+      name: display_name
+      type: char
+  product_uom:
+    from:
+      name: product_uom
+      relation: uom.uom
+      type: many2one
+  product_variant_count:
+    from:
+      name: product_variant_count
+      type: integer

@@ -1,0 +1,25 @@
+domain: []
+external_id_method: row_get_id
+external_id_nomenclature: res_partner_%s
+fields:
+  barcode:
+    from:
+      name: barcode
+      type: char
+    map_method: magic_map
+    to:
+      name: barcode
+      type: char
+model_from: res.partner
+model_to: res.partner
+no_match_fields:
+  pos_order_count:
+    from:
+      name: pos_order_count
+      type: integer
+  pos_order_ids:
+    from:
+      name: pos_order_ids
+      relation: pos.order
+      relation_field: partner_id
+      type: one2many
